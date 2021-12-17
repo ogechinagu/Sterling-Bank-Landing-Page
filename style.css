@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* height: 100vh; */
+    min-width: 375px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f6f6f6;
+}
+
+/* Nav Bar */
+header{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 1.5%;
+}
+
+img{
+    width: 15%;
+    float: left;
+    margin-left: 3%;
+}
+
+button{
+    background-color: #D92128;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 40px;
+}
+
+nav{
+    position: absolute;
+    float: right;
+    right: 5%;
+}
+
+.navcontent{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.navcontent a{
+    background-color: #D92128;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.navcontent a:hover{
+    background-color: #D33338
+}
+
+nav:hover .navcontent{
+    display: block;
+}
+nav:hover button{
+    background-color: #D33338;
+}
+
+/* Main Container */
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+
+.personal{
+    background-image: url("https://sterling.ng/wp-content/uploads/2019/02/sterling-landing-page-01-04.jpg");
+}
+
+.business{
+    background-image: url("https://sterling.ng/wp-content/uploads/2019/02/sterling-landing-page-01-02.jpg");
+}
+
+.alternative{
+    background-image: url("https://sterling.ng/wp-content/uploads/2019/02/sterling-landing-page-01-03.jpg");
+}
+
+p{
+    color: #FFF;
+    position: absolute;
+    bottom: 4vh;
+    width: 33%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 695px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 150vh;
+    }
+    p{
+        color: #FFF;
+        position: absolute;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .personal p{
+        color: #FFF;
+        position: absolute;
+        bottom: 68%;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .business p{
+        color: #FFF;
+        position: absolute;
+        bottom: 45%;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .alternative p{
+        color: #FFF;
+        position: absolute;
+        bottom: 2%;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .header{
+        display: flex;
+        width: 100%;
+        padding: 30px;
+    }
+    img{
+        width: 20%;
+        float: left;
+    }
+}
